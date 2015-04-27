@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DACB56A5-78DE-444A-B0BC-F20EF90713FD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SIMBL-FScript</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3CB7243D47C33376D1807162D3F543143E77735B</key>
+		<string>https://github.com/perfaram/SIMBL-fscript.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SIMBL-FScript/SIMBL-FScript.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3CB7243D47C33376D1807162D3F543143E77735B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/perfaram/SIMBL-fscript.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3CB7243D47C33376D1807162D3F543143E77735B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3CB7243D47C33376D1807162D3F543143E77735B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SIMBL-fscript</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BB681441AEEA47B00DCB6CA /* FScriptLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB681431AEEA47B00DCB6CA /* FScriptLoader.m */; };
+		0BB6816E1AF01C2D00DCB6CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB6816D1AF01C2D00DCB6CA /* Cocoa.framework */; };
+		0BB681701AF01C4400DCB6CA /* FScript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB6816F1AF01C4400DCB6CA /* FScript.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -15,6 +17,8 @@
 		0BB6813C1AEEA40C00DCB6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BB681421AEEA47B00DCB6CA /* FScriptLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FScriptLoader.h; sourceTree = "<group>"; };
 		0BB681431AEEA47B00DCB6CA /* FScriptLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FScriptLoader.m; sourceTree = "<group>"; };
+		0BB6816D1AF01C2D00DCB6CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0BB6816F1AF01C4400DCB6CA /* FScript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FScript.framework; path = ../../../../../../../Library/Frameworks/FScript.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +26,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB681701AF01C4400DCB6CA /* FScript.framework in Frameworks */,
+				0BB6816E1AF01C2D00DCB6CA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +37,8 @@
 		0BB6812F1AEEA40C00DCB6CA = {
 			isa = PBXGroup;
 			children = (
+				0BB6816F1AF01C4400DCB6CA /* FScript.framework */,
+				0BB6816D1AF01C2D00DCB6CA /* Cocoa.framework */,
 				0BB6813A1AEEA40C00DCB6CA /* SIMBL-FScript */,
 				0BB681391AEEA40C00DCB6CA /* Products */,
 			);
@@ -213,6 +221,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "SIMBL-FScript/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -225,6 +237,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "SIMBL-FScript/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -252,6 +268,7 @@
 				0BB681411AEEA40C00DCB6CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

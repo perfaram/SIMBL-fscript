@@ -7,7 +7,7 @@
 //
 
 #import "FScriptLoader.h"
-//#import "/Library/Frameworks/FScript.framework/Headers/FScript.h"
+
 
 @implementation FScriptLoader
 /**
@@ -19,6 +19,42 @@
 	[[NSBundle bundleWithPath:@"/Library/Frameworks/FScript.framework"] load];
 	[NSClassFromString(@"FScriptMenuItem") performSelector:@selector(insertInMainMenu)];
 	NSLog(@"FScript loaded");
+}
+
+-(id) init {
+	self = [super init];
+	if( !self ) return nil;
+	menuItem = [FScriptMenuItem.alloc init];
+	[NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask
+										   handler:^(NSEvent *event){
+											   if ([event modifierFlags] == 1704234 && [event keyCode] == 8) {
+												   /*CMD, ALT, SHIFT + C*/
+												   [menuItem performSelector:@selector(showConsole:) withObject:nil];
+											   } else if ([event modifierFlags] == 1704234 && [event keyCode] == 31) {
+												   [menuItem performSelector:@selector(openObjectBrowser:) withObject:nil];
+											   }
+										   }];
+	
+	NSEvent * (^monitorHandler)(NSEvent *);
+	monitorHandler = ^NSEvent * (NSEvent * event){
+		if ([event modifierFlags] == 1704234 && [event keyCode] == 8) {
+			/*CMD, ALT, SHIFT + C*/
+			[menuItem performSelector:@selector(showConsole:) withObject:nil];
+			return nil;
+		} else if ([event modifierFlags] == 1704234 && [event keyCode] == 31) {
+			[menuItem performSelector:@selector(openObjectBrowser:) withObject:nil];
+			return nil;
+		}
+		// Return the event, a new event, or, to stop
+		// the event from being dispatched, nil
+		return event;
+	};
+	
+	eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask
+														 handler:monitorHandler];
+	
+	
+	return self;
 }
 
 /**

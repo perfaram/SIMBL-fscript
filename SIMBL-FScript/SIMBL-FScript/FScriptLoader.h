@@ -6,9 +6,14 @@
 //  Copyright (c) 2015 faramaz. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+//#import "/Library/Frameworks/FScript.framework/Headers/FScript.h"
+#import "/Library/Frameworks/FScript.framework/Headers/FScriptMenuItem.h"
 
-@interface FScriptLoader : NSObject
+@interface FScriptLoader : NSObject {
+	id eventMonitor;
+	FScriptMenuItem* menuItem;
+}
 +(void) load;
 +(FScriptLoader*) sharedInstance;
 @end

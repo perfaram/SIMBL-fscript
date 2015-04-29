@@ -114,6 +114,8 @@
 		NSString *portTitle = [NSString stringWithFormat:@"UDP port: %@",
 							   udpPort >= 0 ? [NSNumber numberWithInt:udpPort] : @"unavailable"];
 	}
+	consoleStr = [NSString stringWithFormat:@"%@.%@",[[NSBundle mainBundle] bundleIdentifier], @"console"];
+	browserStr = [NSString stringWithFormat:@"%@.%@",[[NSBundle mainBundle] bundleIdentifier], @"browser"];
 	return self;
 }
 
@@ -168,9 +170,9 @@
 			   fromAddress:(NSData *)address {
 	NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	
-	if ([msg isEqualToString:@"browser"])
+	if ([msg isEqualToString:browserStr])
 		[self showFScriptBrowser];
-	else if ([msg isEqualToString:@"console"])
+	else if ([msg isEqualToString:consoleStr])
 		[self showFScriptConsole];
 }
 

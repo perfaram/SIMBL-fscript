@@ -16,6 +16,8 @@
 	FScriptMenuItem* menuItem;
 	GCDAsyncUdpSocket *udpSocket;
 	int udpPort;
+	NSString* consoleStr;
+	NSString* browserStr;
 }
 
 +(void) load;

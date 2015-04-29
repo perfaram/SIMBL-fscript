@@ -9,11 +9,15 @@
 #import <Cocoa/Cocoa.h>
 //#import "/Library/Frameworks/FScript.framework/Headers/FScript.h"
 #import "/Library/Frameworks/FScript.framework/Headers/FScriptMenuItem.h"
+#import "GCDAsyncUdpSocket.h"
 
 @interface FScriptLoader : NSObject {
 	id eventMonitor;
 	FScriptMenuItem* menuItem;
+	GCDAsyncUdpSocket *udpSocket;
+	int udpPort;
 }
+
 +(void) load;
 +(FScriptLoader*) sharedInstance;
 @end

@@ -10,6 +10,9 @@
 		0BB681441AEEA47B00DCB6CA /* FScriptLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB681431AEEA47B00DCB6CA /* FScriptLoader.m */; };
 		0BB6816E1AF01C2D00DCB6CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB6816D1AF01C2D00DCB6CA /* Cocoa.framework */; };
 		0BB681701AF01C4400DCB6CA /* FScript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB6816F1AF01C4400DCB6CA /* FScript.framework */; };
+		0BB681731AF1089100DCB6CA /* RSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB681721AF1089100DCB6CA /* RSSwizzle.m */; };
+		0BB681781AF110F400DCB6CA /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB681751AF110F400DCB6CA /* GCDAsyncSocket.m */; };
+		0BB681791AF110F400DCB6CA /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB681771AF110F400DCB6CA /* GCDAsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,12 @@
 		0BB681431AEEA47B00DCB6CA /* FScriptLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FScriptLoader.m; sourceTree = "<group>"; };
 		0BB6816D1AF01C2D00DCB6CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0BB6816F1AF01C4400DCB6CA /* FScript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FScript.framework; path = ../../../../../../../Library/Frameworks/FScript.framework; sourceTree = "<group>"; };
+		0BB681711AF1089100DCB6CA /* RSSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSwizzle.h; sourceTree = "<group>"; };
+		0BB681721AF1089100DCB6CA /* RSSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSwizzle.m; sourceTree = "<group>"; };
+		0BB681741AF110F400DCB6CA /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		0BB681751AF110F400DCB6CA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0BB681761AF110F400DCB6CA /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		0BB681771AF110F400DCB6CA /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,12 @@
 			children = (
 				0BB681421AEEA47B00DCB6CA /* FScriptLoader.h */,
 				0BB681431AEEA47B00DCB6CA /* FScriptLoader.m */,
+				0BB681711AF1089100DCB6CA /* RSSwizzle.h */,
+				0BB681721AF1089100DCB6CA /* RSSwizzle.m */,
+				0BB681741AF110F400DCB6CA /* GCDAsyncSocket.h */,
+				0BB681751AF110F400DCB6CA /* GCDAsyncSocket.m */,
+				0BB681761AF110F400DCB6CA /* GCDAsyncUdpSocket.h */,
+				0BB681771AF110F400DCB6CA /* GCDAsyncUdpSocket.m */,
 				0BB6813B1AEEA40C00DCB6CA /* Supporting Files */,
 			);
 			path = "SIMBL-FScript";
@@ -136,7 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB681791AF110F400DCB6CA /* GCDAsyncUdpSocket.m in Sources */,
+				0BB681781AF110F400DCB6CA /* GCDAsyncSocket.m in Sources */,
 				0BB681441AEEA47B00DCB6CA /* FScriptLoader.m in Sources */,
+				0BB681731AF1089100DCB6CA /* RSSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

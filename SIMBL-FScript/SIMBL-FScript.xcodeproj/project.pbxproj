@@ -95,6 +95,7 @@
 				0BB681341AEEA40C00DCB6CA /* Sources */,
 				0BB681351AEEA40C00DCB6CA /* Frameworks */,
 				0BB681361AEEA40C00DCB6CA /* Resources */,
+				FAE4BB951B361D3B0011AC29 /* Change F-Script.framework linking path */,
 			);
 			buildRules = (
 			);
@@ -145,6 +146,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAE4BB951B361D3B0011AC29 /* Change F-Script.framework linking path */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Change F-Script.framework linking path";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$(xcode-select -p)/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool \\\n-change \\\n@executable_path/../Frameworks/FScript.framework/Versions/A/FScript \\\n/Library/Frameworks/FScript.framework/Versions/A/FScript \\\n\"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BB681341AEEA40C00DCB6CA /* Sources */ = {

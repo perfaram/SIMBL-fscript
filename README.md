@@ -20,4 +20,4 @@ Specifically, this plugin comes in handy when the program you want to explore di
 * Shortcuts : *⌘ + ⌥ + ⇧ + C* to show console, *⌘ + ⌥ + ⇧ + O* to show Object browser.
 * Use the UDP socket at port 7138 : `echo -n "bundleID.command" | nc -4u -w0 localhost 7138`. Replace `bundleID` by the target app's bundle ID (eg *com.panic.Coda2*), and `command` by *console* or *browser*.
 
-NB : This will load FScript into all applications. To load it into one specific app, open my project in xCode, and edit Info.plist's BundleIdentifier key (into SIMBLTargetApplications array) to match your app's identifier.
+NB : This will load FScript into all applications. To load it into one specific app, edit Info.plist's BundleIdentifier key (into SIMBLTargetApplications array) to match your app's identifier.
